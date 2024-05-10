@@ -41,18 +41,18 @@ int main()
     ArmaAtaque* faca = new Faca("Faca Afiada",0,50);
 
     ArmaDefesa* escudo = new Escudo("Latão", 1);
-    ArmaDefesa* Caneleira = new Caneleira("Caneleira",5);
-    ArmaDefesa* Capacete = new Capacete("Capacete",2);
-    ArmaDefesa* Tampa = new Tampa("Tampa de bueiro",5);
-    ArmaDefesa* Armadura = new Armadura("Armadura",3);
-    ArmaDefesa* Constituicao = new Constituicao("Constituição do panamá",5);
+    ArmaDefesa* caneleira = new Caneleira("Caneleira",5);
+    ArmaDefesa* capacete = new Capacete("Capacete",2);
+    ArmaDefesa* tampa = new Tampa("Tampa de bueiro",5);
+    ArmaDefesa* armadura = new Armadura("Armadura",3);
+    ArmaDefesa* constituicao = new Constituicao("Constituição do panamá",5);
     
     Personagem* p1 = new Chaves(1, "Chaves", 100, arma, escudo);
-    Personagem* p3 = new Gari(1, "Gari", 100, regua, Tampa);
-    Personagem* p2 = new Atacante(2, "Atacante", 100, celular, Caneleira);
-    Personagem* p4 = new Pedreiro(2, "Pedreiro", 100, picareta, Armadura);
-    Personagem* p5 = new Zagueiro(2, "Zagueiro", 100, faca, Constituicao);
-    Personagem* p6 = new Zoro(2, "Zoro", 100, garfo, Capacete);
+    Personagem* p3 = new Gari(1, "Gari", 100, regua, tampa);
+    Personagem* p2 = new Atacante(2, "Atacante", 100, celular, caneleira);
+    Personagem* p4 = new Pedreiro(2, "Pedreiro", 100, picareta, armadura);
+    Personagem* p5 = new Zagueiro(2, "Zagueiro", 100, faca, constituicao);
+    Personagem* p6 = new Zoro(2, "Zoro", 100, garfo, capacete);
 
     Simulador* simulador = new Simulador();
     simulador->adicionarPersonagem(p1, 1);
