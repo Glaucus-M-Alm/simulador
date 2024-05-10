@@ -1,9 +1,12 @@
 #!/bin/bash
 source ./compilar.sh
 cd acessorios-cpp/
-g++ -c *.cpp 
+g++ -c *.cpp
+cd ..
+cd personagens-cpp/
+g++ -c *.cpp  
 cd ..
 cd core-simulador-cpp
 g++ -c *.cpp 
 cd ..
-g++ principal\\main.cpp acessorios-cpp\\*.o core-simulador-cpp\\*.o
+g++ principal/main.cpp acessorios-cpp/*.o core-simulador-cpp/*.o personagens-cpp/*.o -o programa
