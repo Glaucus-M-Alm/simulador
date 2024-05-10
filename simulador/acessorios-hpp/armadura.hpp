@@ -3,7 +3,7 @@
 
 #include "../core-simulador-hpp/ArmaAtaque.hpp"
 #include "../core-simulador-hpp/ArmaDefesa.hpp"
-class Armadura: public ArmaDefesa
+class Armadura : public ArmaDefesa
 {
     public:
         Armadura(string descricaoArma, int resistencia);
