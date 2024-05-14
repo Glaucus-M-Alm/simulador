@@ -74,19 +74,24 @@ Personagem* Simulador::proximoPersonagem(vector<Personagem*> equipe)
     {
         return nullptr;
     }
-
-    int contador = 0;
-    while (contador < tamanho)
-    {
-        if (equipe[contador]->getVida()>0)
+    //início da mudança
+    int contador;
+    int randIndex;
+    bool Derrota=true;
+        for(contador=0;contador<tamanho;contador++)
         {
-            return equipe[contador];
+            if(equipe[contador]->getVida()>0){
+                Derrota=false;
+                break;
+            }
+        }//este for irá verificar se há algum membro ainda de pé, deixando a Derrota em falso caso haja
+        if(Derrota){//caso todos tenham sido derrotados será finalizada a escolha de personagens, retornando nullptr
+            return nullptr;
         }
-        contador++;
-
-    }
-
-    return nullptr;
+        do{
+            randIndex=rand()%tamanho;//irá escolher aleatoriamente uma das posições do vetor da equipe
+        }while(equipe[randIndex]->getVida()<=0);//O loop continuará enquanto o rand não escolher um personagem com vida
+        return equipe[randIndex];//retornará o membro da equipe escolhido aleatoriamente
 }
 
 int Simulador::criarCombate(Personagem* personagem1, Personagem* personagem2)

@@ -48,11 +48,11 @@ int main()
     ArmaDefesa* constituicao = new Constituicao("Constituição do panamá",5);
     
     Personagem* p1 = new Chaves(1, "Chaves", 100, arma, escudo);
-    Personagem* p3 = new Gari(1, "Gari", 100, regua, tampa);
-    Personagem* p2 = new Atacante(2, "Atacante", 100, celular, caneleira);
-    Personagem* p4 = new Pedreiro(2, "Pedreiro", 100, picareta, armadura);
-    Personagem* p5 = new Zagueiro(2, "Zagueiro", 100, faca, constituicao);
-    Personagem* p6 = new Zoro(2, "Zoro", 100, garfo, capacete);
+    Personagem* p3 = new Gari(2, "Gari", 100, regua, tampa);
+    Personagem* p2 = new Atacante(3, "Atacante", 100, celular, caneleira);
+    Personagem* p4 = new Pedreiro(4, "Pedreiro", 100, picareta, armadura);
+    Personagem* p5 = new Zagueiro(5, "Zagueiro", 100, faca, constituicao);
+    Personagem* p6 = new Zoro(6, "Zoro", 100, garfo, capacete);
 
     Simulador* simulador = new Simulador();
     simulador->adicionarPersonagem(p1, 1);
